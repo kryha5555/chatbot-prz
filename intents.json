@@ -1,0 +1,43 @@
+{
+        "intents": [
+                {
+                        "tag": "hello",
+                        "patterns": [
+                                "Cze\u015b\u0107",
+                                "Witam",
+                                "Dobry wiecz\u00F3r",
+                                "Dzie\u0144 dobry",
+                                "Hej",
+                                "Hejka",
+                                "Hejo"
+                        ],
+                        "responses": [
+                                "Hejka!",
+                                "Witaj",
+                                "Pozdrawiam",
+                                "Witam serdecznie i gor\u0105co"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "goodbye",
+                        "patterns": [
+                                "Do widzenia i mi\u0142ego dnia",
+                                "Do widzenia",
+                                "\u017Begnaj",
+                                "Dobranoc",
+                                "Papa"
+                        ],
+                        "responses": [
+                                "Dobrego dnia",
+                                "Zapraszam ponownie",
+                                "Mi\u0142o by\u0142o cie pozna\u0107"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                }
+        ]
+}
