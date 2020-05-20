@@ -2,15 +2,23 @@ import numpy as np
 import random
 import json
 import pickle
-import nltk
-from tensorflow.keras.models import load_model
-from flask import Flask, render_template, request
+import nltk.tokenize
 from stempel import StempelStemmer
-stemmer = StempelStemmer.default()
+import tflite_runtime.interpreter as tflite
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+nltk.download('punkt')
+stemmer = StempelStemmer.default()
 
-model = load_model('chatbot_model.h5')
+interpreter = tflite.Interpreter(model_path='model.tflite')
+interpreter.allocate_tensors()
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+input_shape = input_details[0]['shape']
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
@@ -31,16 +39,21 @@ def bow(sentence, words, show_details=True):
                 bag[i] = 1
                 if show_details:
                     print("found in bag: %s" % w)
-    return(np.array(bag))
+    return(np.array(bag, dtype='float32'))
 
 
-def predict_class(sentence, model):
+def predict_class(sentence, interpreter):
     p = bow(sentence, words, False)
-    res = model.predict(np.array([p]))[0]
+    p = p.reshape(input_shape)
+    interpreter.set_tensor(input_details[0]['index'], p)
+    interpreter.invoke()
+    res = interpreter.get_tensor(output_details[0]['index'])[0]
+
     ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
+
     for r in results:
         return_list.append(
             {"intent": classes[r[0]], "probability": str(r[1])})
@@ -65,6 +78,12 @@ def hello_world():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')
-    ints = predict_class(userText, model)
+    ints = predict_class(userText, interpreter)
     res = get_response(ints, intents)
     return res
+
+
+#userText = 'Test'
+# ints = predict_class(userText, interpreter)
+# res = get_response(ints, intents)
+# print(res)
