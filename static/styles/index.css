@@ -56,3 +56,47 @@ body {
     min-height: 40px;
     width: 100%;
 }
+
+.botTextBox {
+    display: block;
+    text-align: start;
+    min-height: 40px;
+    margin: 10px auto;
+    width: 100%;
+    clear: both;
+    overflow-wrap: normal;
+    flex-shrink: 0;
+}
+
+.botText {
+    display: inline-block;
+    background-color: #dee1ff;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px #ddd;
+    padding: 8px 20px;
+    min-height: 40px;
+    text-align: left;
+    margin: 0;
+}
+
+.userTextBox {
+    display: block;
+    text-align: end;
+    min-height: 40px;
+    margin: 10px auto;
+    width: 100%;
+    clear: both;
+    overflow-wrap: normal;
+    flex-shrink: 0;
+}
+
+.userText {
+    display: inline-block;
+    background-color: #a2bbff;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px #ddd;
+    padding: 8px 20px;
+    min-height: 40px;
+    text-align: right;
+    margin: 0;
+}

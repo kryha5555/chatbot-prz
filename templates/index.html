@@ -40,12 +40,18 @@
             function getBotResponse() {
                 var rawText = $("#textInput").val();
                 if (rawText != "") {
-                    var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                    var userHtml =
+                        '<div class="userTextBox"><p class="userText"><span>' +
+                        rawText +
+                        "</span></p></div>";
                     $("#textInput").val("");
-                    $("#chatbox").append(userHtml);
+                    $("#chatbox").prepend(userHtml);
                     $.get("/get", { msg: rawText }).done(function (data) {
-                        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-                        $("#chatbox").append(botHtml);
+                        var botHtml =
+                            '<div class="botTextBox"><p class="botText"><span>' +
+                            data +
+                            "</span></p></div>";
+                        $("#chatbox").prepend(botHtml);
                     });
                 }
             }
