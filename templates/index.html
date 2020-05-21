@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html>
-<title>PRz Chatbot</title>
+    <title>PRz Chatbot</title>
 
-<head>
-    <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
+    </head>
 
-<body>
-    <div class="box">
-        <div id="chatbox">
-            <p class="botText">
-                <span>Cześć, jestem botem.</span>
-            </p>
+    <body>
+        <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand">Chatbot PRz</a>
+            </div>
         </div>
-        <div id="userInput">
-            <input id="textInput" type="text" name="msg" placeholder="Message" />
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8">
+                    <div class="box">
+                        <div id="chatbox">
+                            <p class="botText">
+                                <span>Cześć, jestem botem.</span>
+                            </p>
+                        </div>
+                        <div class="textInputBox" id="userInput">
+                            <input id="textInput" type="text" name="msg" placeholder="Message" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <script>
-        function getBotResponse() {
-            var rawText = $("#textInput").val();
-            if (rawText != "") {
-                var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
-                $("#textInput").val("");
-                $("#chatbox").append(userHtml);
-                $.get("/get", { msg: rawText }).done(function (data) {
-                    var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-                    $("#chatbox").append(botHtml);
-                })
+        <script>
+            function getBotResponse() {
+                var rawText = $("#textInput").val();
+                if (rawText != "") {
+                    var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                    $("#textInput").val("");
+                    $("#chatbox").append(userHtml);
+                    $.get("/get", { msg: rawText }).done(function (data) {
+                        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                        $("#chatbox").append(botHtml);
+                    });
+                }
             }
-        }
 
-        $("#textInput").keypress(function (e) {
-            if (e.which == 13) {
-                getBotResponse();
-            }
-        });
-    </script>
-</body>
+            $("#textInput").keypress(function (e) {
+                if (e.which == 13) {
+                    getBotResponse();
+                }
+            });
+        </script>
+    </body>
+</html>
