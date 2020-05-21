@@ -1,0 +1,52 @@
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: white;
+    overflow: hidden;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+}
+
+.content {
+    margin-top: 85px;
+}
+
+.box {
+    background-color: #fafafa;
+    box-shadow: 0px 2px 8px gray;
+    min-height: 70vh;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox {
+    display: block;
+    flex: 1;
+}
+
+.textInputBox {
+    display: block;
+    width: 100%;
+}
+
+.textInput {
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px #ddd;
+    border: none;
+    padding: 0px 20px;
+    min-height: 40px;
+    width: 100%;
+}
