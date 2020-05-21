@@ -37,6 +37,9 @@
             </div>
         </div>
         <script>
+            window.onload = () => {
+                document.getElementById("textInput").focus();
+            };
             function getBotResponse() {
                 var rawText = $("#textInput").val();
                 if (rawText != "") {
@@ -44,6 +47,7 @@
                         '<div class="userTextBox"><p class="userText"><span>' +
                         rawText +
                         "</span></p></div>";
+                    document.getElementById("textInput").disabled = true;
                     $("#textInput").val("");
                     $("#chatbox").prepend(userHtml);
                     $.get("/get", { msg: rawText }).done(function (data) {
@@ -52,6 +56,8 @@
                             data +
                             "</span></p></div>";
                         $("#chatbox").prepend(botHtml);
+                        document.getElementById("textInput").disabled = false;
+                        document.getElementById("textInput").focus();
                     });
                 }
             }
