@@ -71,7 +71,7 @@ def get_response(ints, intents_json):
 
 
 @app.route('/')
-def hello_world():
+def index():
     return render_template('index.html')
 
 
@@ -82,6 +82,9 @@ def get_bot_response():
     res = get_response(ints, intents)
     return res
 
+@app.route('/about/')
+def about():
+    return render_template('about.html')
 
 #userText = 'Test'
 # ints = predict_class(userText, interpreter)
