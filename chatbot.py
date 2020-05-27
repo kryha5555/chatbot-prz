@@ -11,7 +11,7 @@ app = Flask(__name__)
 nltk.download('punkt')
 stemmer = StempelStemmer.default()
 
-interpreter = tflite.Interpreter(model_path='model.tflite')
+interpreter = tflite.Interpreter(model_path='training/model.tflite')
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
@@ -19,9 +19,9 @@ input_shape = input_details[0]['shape']
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
-intents = json.loads(open('intents.json').read())
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
+intents = json.loads(open('training/intents.json').read())
+words = pickle.load(open('training/words.pkl', 'rb'))
+classes = pickle.load(open('training/classes.pkl', 'rb'))
 
 
 def clean_up_sentence(sentence):
@@ -82,11 +82,7 @@ def get_bot_response():
     res = get_response(ints, intents)
     return res
 
+
 @app.route('/about/')
 def about():
     return render_template('about.html')
-
-#userText = 'Test'
-# ints = predict_class(userText, interpreter)
-# res = get_response(ints, intents)
-# print(res)
