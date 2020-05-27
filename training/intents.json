@@ -1,7 +1,7 @@
 {
         "intents": [
                 {
-                        "tag": "hello",
+                        "tag": "powitanie",
                         "patterns": [
                                 "Cześć",
                                 "Witam",
@@ -19,7 +19,7 @@
                         ]
                 },
                 {
-                        "tag": "goodbye",
+                        "tag": "pozegnanie",
                         "patterns": [
                                 "Do widzenia i miłego dnia",
                                 "Do widzenia",
@@ -34,7 +34,7 @@
                         ]
                 },
                 {
-                        "tag": "none",
+                        "tag": "brak",
                         "patterns": [
                                 ""
                         ],
@@ -42,6 +42,82 @@
                                 "Nie mogę Cię zrozumieć...",
                                 "Powtórz proszę",
                                 "Nie wiem o czym mówisz"
+                        ]
+                },
+                {
+                        "tag": "uklad",
+                        "patterns": [
+                                "Układ pracy dyplomowej",
+                                "Z czego składa się praca dyplomowa?",
+                                "Jakie są elementy pracy dyplomowej?",
+                                "Co powinna zawierać praca dyplomowa?",
+                                "Co zawiera praca dyplomowa?"
+                        ],
+                        "responses": [
+                                "Praca dyplomowa składa się ze strony tytułowej, spisu treści, wykazu symboli, oznaczeń i skrótów, wstępu, dwóch rozdziałów tekstu zasadniczego, podsumowania i wniosków końcowych, załączników, wykazu literatury i streszczenia pracy"
+                        ]
+                },
+                {
+                        "tag": "co_potrafisz",
+                        "patterns": [
+                                "Co potrafisz?",
+                                "O czym możesz mi powiedzieć?",
+                                "Co umiesz?",
+                                "O czym potrafisz mówić",
+                                "Co możesz mi powiedzieć?"
+                        ],
+                        "responses": [
+                                "Mogę podpowiedzieć Ci, w jaki sposób sformatować swoją pracę dyplomową",
+                                "Potrafię pomóc Ci z formatowaniem pracy dyplomowej"
+                        ]
+                },
+                {
+                        "tag": "tytulowa",
+                        "patterns": [
+                                "Jak wygląda strona tytułowa?",
+                                "Z czego składa się strona tytułowa?",
+                                "Jak zatytułować pracę?",
+                                "Jak wygląda pierwsza strona?",
+                                "Co jest na pierwszej stronie?",
+                                "Co powinno się znaleźć na pierwszej stronie tytułowej?",
+                                "Gdzie umieścić tytuł pracy",
+                                "Gdzie powinien być tytuł"
+                        ],
+                        "responses": [
+                                "Pierwsza strona pracy dyplomowej musi być zgodna ze „Wzorem strony tytułowej”. Znajduje się on na stronie WWW Wydziału, w zakładce „Do pobrania”"
+                        ]
+                },
+                {
+                        "tag": "spis",
+                        "patterns": [
+                                "Jak wygląda spis treści?",
+                                "Z czego składa się spis treści?",
+                                "Jak stworzyć spis treści?",
+                                "Co jest w spisie treści?",
+                                "Co powinno się znaleźć w spis treści?",
+                                "Gdzie umieścić spis treści?",
+                                "Gdzie znajduje się spis treści?"
+                        ],
+                        "responses": [
+                                "Spis treści rozpoczyna się od strony numer 3 (lub 5, jeżeli zamieszczono podziękowania). Zajmuje jedną bądź dwie strony, w pełnej zgodności z rozkładem treści pracy"
+                        ]
+                },
+                {
+                        "tag": "symbole",
+                        "patterns": [
+                                "Jak wygląda wykaz symboli?",
+                                "Z czego składa się wykaz symboli?",
+                                "Jak stworzyć wykaz symboli?",
+                                "Co jest w wykazie symboli?",
+                                "Co powinno się znaleźć w wykazie symboli?",
+                                "Gdzie umieścić wykaz symboli?",
+                                "Gdzie znajduje się wykaz symboli?",
+                                "Co to jest wykaz symboli?",
+                                "Gdzie umieścić wykorzystane symbole?",
+                                "Gdzie opisać użyte symbole?"
+                        ],
+                        "responses": [
+                                "Po spisie treści zalecane jest umieszczenie wykazu użytych symboli, oznaczeń i akronimów, jeżeli jest to konieczne."
                         ]
                 }
         ]
