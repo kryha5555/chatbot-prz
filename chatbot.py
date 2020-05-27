@@ -19,7 +19,7 @@ input_shape = input_details[0]['shape']
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
-intents = json.loads(open('training/intents.json').read())
+intents = json.loads(open('training/intents.json', encoding='utf-8').read())
 words = pickle.load(open('training/words.pkl', 'rb'))
 classes = pickle.load(open('training/classes.pkl', 'rb'))
 

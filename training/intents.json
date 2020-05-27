@@ -3,10 +3,10 @@
                 {
                         "tag": "hello",
                         "patterns": [
-                                "Cze\u015b\u0107",
+                                "Cześć",
                                 "Witam",
-                                "Dobry wiecz\u00F3r",
-                                "Dzie\u0144 dobry",
+                                "Dobry wieczór",
+                                "Dzień dobry",
                                 "Hej",
                                 "Hejka",
                                 "Hejo"
@@ -15,22 +15,22 @@
                                 "Hejka!",
                                 "Witaj",
                                 "Pozdrawiam",
-                                "Witam serdecznie i gor\u0105co"
+                                "Witam serdecznie i gorąco"
                         ]
                 },
                 {
                         "tag": "goodbye",
                         "patterns": [
-                                "Do widzenia i mi\u0142ego dnia",
+                                "Do widzenia i miłego dnia",
                                 "Do widzenia",
-                                "\u017Begnaj",
+                                "Żegnaj",
                                 "Dobranoc",
                                 "Papa"
                         ],
                         "responses": [
                                 "Dobrego dnia",
                                 "Zapraszam ponownie",
-                                "Mi\u0142o by\u0142o ci\u0119 pozna\u0107"
+                                "Miło było Cię poznań"
                         ]
                 },
                 {
@@ -39,9 +39,9 @@
                                 ""
                         ],
                         "responses": [
-                                "Nie mog\u0119 ci\u0119 zrozumie\u0107...",
-                                "Powt\u00F3rz prosz\u0119.",
-                                "Nie wiem o czym m\u00F3wisz."
+                                "Nie mogę Cię zrozumieć...",
+                                "Powtórz proszę",
+                                "Nie wiem o czym mówisz"
                         ]
                 }
         ]
