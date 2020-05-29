@@ -54,8 +54,8 @@
                                 "wiesz"
                         ],
                         "responses": [
-                                "Mogę podpowiedzieć Ci, w jaki sposób sformatować swoją pracę dyplomową. Możesz zapytać o: układ pracy, formatowanie",
-                                "Potrafię pomóc Ci z formatowaniem pracy dyplomowej. Możesz zapytać o: układ pracy, formatowanie"
+                                "Mogę podpowiedzieć Ci, w jaki sposób sformatować swoją pracę dyplomową. Możesz zapytać o układ pracy lub o formatowanie",
+                                "Potrafię pomóc Ci z formatowaniem pracy dyplomowej. Możesz zapytać o układ pracy lub o formatowanie"
                         ]
                 },
                 {
@@ -175,7 +175,8 @@
                                 "źródło",
                                 "pozycje książkowe",
                                 "wykaz literatury",
-                                "źródła"
+                                "źródła",
+                                "książki"
                         ],
                         "responses": [
                                 "W wykazie literatury zamieszcza się wyłącznie pozycje, na które powołano się w pracy. Wykaz literatury rozpoczyna od strony nieparzystej. Kolejność numerów w wykazie - zgodna z kolejnością pojawiania się danej pozycji w tekście. Format akapitu: akapit wyjustowany, wysunięcie 0,75 cm. Prawidłowo opracowany wykaz został zaprezentowany w szablonie pracy dyplomowej dostępnym na stronie WWW Wydziału, w zakładce „Do pobrania”"
@@ -199,7 +200,7 @@
                                 "formatowanie"
                         ],
                         "responses": [
-                                "Aby dowiedzieć się więcej o formatowaniu, możesz zapytać mnie o: formatowanie rozdziałów, formatowanie tekstu, odnośniki"
+                                "Aby dowiedzieć się więcej o formatowaniu, możesz zapytać mnie o: formatowanie rozdziałów, formatowanie tekstu, odnośniki, rysunki i tabele, wzory matematyczne, numerowanie i punktowanie"
                         ]
                 },
                 {
@@ -210,18 +211,19 @@
                                 "format rozdziału"
                         ],
                         "responses": [
-                                "Rozdziały zaczynają się u góry nowej strony (parzystej lub nieparzystej). Podrozdziały i zakresy mogą zaczynać się w dowolnym miejscu strony. Przy stosowaniu podziału na rozdziały i podrozdziały zaleca się unikać podziału więcej niż trzystopniowego. Podział tekstu, szczególnie na rozdziały główne, wynikać powinien z zakresu i charakterystyki realizowanej pracy. Należy pamiętać, że na końcu tytułu rozdziału, podrozdziału i zakresu nie umieszcza się kropki"
+                                "Rozdziały zaczynają się u góry nowej strony (parzystej lub nieparzystej). Podrozdziały i zakresy mogą zaczynać się w dowolnym miejscu strony. Przy stosowaniu podziału na rozdziały i podrozdziały zaleca się unikać podziału więcej niż trzystopniowego. Podział tekstu, szczególnie na rozdziały główne, wynikać powinien z zakresu i charakterystyki realizowanej pracy. Należy pamiętać, że na końcu tytułu rozdziału, podrozdziału i zakresu nie umieszcza się kropki. Tytuł rozdziału – 16 pkt., tytuł podrozdziału – 14 pkt., tytuł zakresu – 12 pkt. Tytuły powinniy być pogrubione, z wysunięciem 1,25 cm"
                         ]
                 },
                 {
-                        "tag": "format_tekstu",
+                        "tag": "czcionka",
                         "patterns": [
                                 "format tekstu",
                                 "formatowanie tekstu",
-                                "tekst"
+                                "tekst",
+                                "czcionka"
                         ],
                         "responses": [
-                                "Marginesy deklaruje się jako „lustrzane” i ustawia na 2 cm, na oprawę 1,5 cm. Nagłówek i stopka 1,25 cm. Tekst podstawowy akapitu: czcionka szeryfowa, styl Times (Times New Roman, Liberation Serif itp.), rozmiar 12 pkt., interlinia 1,5 wiersza. Akapit wyjustowany, wcięcie pierwszego wiersza 1,25 cm."
+                                "Marginesy deklaruje się jako „lustrzane” i ustawia na 2 cm, na oprawę 1,5 cm. Nagłówek i stopka 1,25 cm. Tekst podstawowy akapitu: czcionka szeryfowa, styl Times (Times New Roman, Liberation Serif itp.), rozmiar 12 pkt., interlinia 1,5 wiersza. Akapit wyjustowany, wcięcie pierwszego wiersza 1,25 cm. Cytaty (dosłowne przytoczenie obcego tekstu w pracy) pisze się czcionką pochyłą (kursywą) i ujmuje w cudzysłów. Fragmenty kodów programów pisze się czcionką o stałej szerokości, styl Courier (Courier New, Liberation Mono itp.) o rozmiarze 10 punktów"
                         ]
                 },
                 {
@@ -229,10 +231,52 @@
                         "patterns": [
                                 "odnośnik",
                                 "cytat",
-                                "przypis"
+                                "przypis",
+                                "odnośniki",
+                                "cytaty",
+                                "przypisy"
                         ],
                         "responses": [
                                 "Na końcu każdego akapitu, którego tekst zaczerpnięto z literatury, musi znajdować się odnośnik do właściwej pozycji w wykazie literatury. W pracy nie stosuje się odnośników w formie przypisów. Liczby w nawiasie kwadratowym oznaczają kolejny numer pozycji w wykazie, np. [1] lub [1, 4, 7] lub [1, 6-8] itp."
+                        ]
+                },
+                {
+                        "tag": "rysunki",
+                        "patterns": [
+                                "rysunki",
+                                "tabele",
+                                "rysunek",
+                                "tabela",
+                                "rysunki tabele"
+                        ],
+                        "responses": [
+                                "Tekst podstawowy w tabeli pisze się czcionką o rozmiarze 10 punktów, wyśrodkowany, pojedyncza interlinia. Rysunki i tabele zamieszcza się wyśrodkowane na stronie, bez wcięcia pierwszego wiersza. W akapicie poprzedzającym rysunek lub tabelę musi znajdować się krótki opis, czego dotyczy dany rysunek/tabela (odniesienie do rysunku/tabeli). Tytuły numeruje się zgodnie z kolejnością w danym rozdziale: numer_rozdziału.numer_tabeli/rysunku (np. rys. 2.1, tabela 3.5). W tytule rysunku/tabeli, zaczerpniętych z literatury, podaje się odnośnik do właściwej pozycji. Należy zadbać o to, aby opisy na rysunkach były czytelne (czcionka 8 punktów lub większa). "
+                        ]
+                },
+                {
+                        "tag": "wzory",
+                        "patterns": [
+                                "wzory",
+                                "wzor",
+                                "matematyczne",
+                                "zmienne",
+                                "równania"
+                        ],
+                        "responses": [
+                                "Zmienne we wzorach pisze się czcionką pochyłą (styl edytora równań „Matematyka”) natomiast symbole, nie będące zmiennymi, czcionką prostą (styl „Tekst”). Rozmiary czcionek: normalny 12 punktów, indeks dolny/górny 9 pkt., indeks podrzędny 7 pkt., symbol 24 pkt., podsymbol 12 pkt. Separatorem dziesiętnym w liczbach jest przecinek a nie kropka (dotyczy to również liczb pisanych w tekście akapitu). Pod wzorem należy zamieścić objaśnienia użytych symboli (chyba, że znajdują się w wykazie na początku pracy). Wzory umieszcza się wyśrodkowane i numeruje zgodnie z kolejnością w danym rozdziale: (numer_rozdziału.numer_wzoru). Numery wzorów wyrównuje się do prawego marginesu. W akapicie poprzedzającym wzór musi znajdować się krótki opis, czego dotyczy dany wzór i – jeżeli potrzeba – odwołanie do literatury. "
+                        ]
+                },
+                {
+                        "tag": "numery",
+                        "patterns": [
+                                "numerowanie",
+                                "punktowanie",
+                                "numerowanie i punktowanie",
+                                "numer",
+                                "punkt"
+                        ],
+                        "responses": [
+                                "W pierwszym poziomie stosuje się numerowanie lub punktowanie. Formatowanie: akapit wyjustowany, wcięcie od lewej 0,75 cm, wysunięcie co 0,5 cm. Znakiem numerowania jest liczba (z kropką lub nawiasem). W drugim poziomie stosuje się wyłącznie punktowanie. Formatowanie: akapit wyjustowany, wcięcie od lewej 1,25 cm, wysunięcie co 0,5 cm, znakiem punktowania jest łącznik lub mała litera alfabetu (z nawiasem). Nie zaleca się stosowania kropek, strzałek itp. Punktowane akapity rozpoczyna się minuskułą (małą literą), na końcu akapitu stawia się przecinek, ostatni punktowany akapit kończy się kropką. Numerowane akapity rozpoczyna się majuskułą (wielką literą) i kończy kropką."
                         ]
                 }
         ]
