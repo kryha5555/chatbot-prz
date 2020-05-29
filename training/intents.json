@@ -21,11 +21,12 @@
                 {
                         "tag": "pozegnanie",
                         "patterns": [
-                                "Do widzenia i miłego dnia",
+                                "Miłego dnia",
                                 "Do widzenia",
                                 "Żegnaj",
                                 "Dobranoc",
-                                "Papa"
+                                "Papa",
+                                "Pa"
                         ],
                         "responses": [
                                 "Dobrego dnia",
@@ -45,30 +46,31 @@
                         ]
                 },
                 {
-                        "tag": "uklad",
+                        "tag": "co_potrafisz",
                         "patterns": [
-                                "Układ pracy dyplomowej",
-                                "Układ pracy inżynierskiej",
-                                "Układ pracy",
-                                "Elementy pracy",
-                                "Zawartość pracy"
+                                "potrafisz",
+                                "możesz powiedzieć?",
+                                "umiesz",
+                                "wiesz"
                         ],
                         "responses": [
-                                "Praca dyplomowa składa się ze strony tytułowej, spisu treści, wykazu symboli, oznaczeń i skrótów, wstępu, dwóch rozdziałów tekstu zasadniczego, podsumowania i wniosków końcowych, załączników, wykazu literatury i streszczenia pracy"
+                                "Mogę podpowiedzieć Ci, w jaki sposób sformatować swoją pracę dyplomową. Możesz zapytać o: układ pracy, formatowanie",
+                                "Potrafię pomóc Ci z formatowaniem pracy dyplomowej. Możesz zapytać o: układ pracy, formatowanie"
                         ]
                 },
                 {
-                        "tag": "co_potrafisz",
+                        "tag": "uklad",
                         "patterns": [
-                                "Co potrafisz?",
-                                "O czym możesz mi powiedzieć?",
-                                "Co umiesz?",
-                                "O czym potrafisz mówić",
-                                "Co możesz mi powiedzieć?"
+                                "układ pracy dyplomowej",
+                                "układ pracy inżynierskiej",
+                                "układ pracy",
+                                "elementy pracy",
+                                "zawartość pracy",
+                                "składa",
+                                "zawiera"
                         ],
                         "responses": [
-                                "Mogę podpowiedzieć Ci, w jaki sposób sformatować swoją pracę dyplomową. Dostępne zagadnienia to: układ pracy, strona tytułowa, spis treści, wykaz symboli",
-                                "Potrafię pomóc Ci z formatowaniem pracy dyplomowej. Dostępne zagadnienia to: układ pracy, strona tytułowa, spis treści, wykaz symboli"
+                                "Praca dyplomowa składa się ze strony tytułowej, spisu treści, wykazu symboli, oznaczeń i skrótów, wstępu, dwóch rozdziałów tekstu zasadniczego, podsumowania i wniosków końcowych, załączników, wykazu literatury i streszczenia pracy. Zapytaj o jedną z części pracy, a podpowiem Ci, co powinno się w niej znaleźć"
                         ]
                 },
                 {
@@ -81,6 +83,16 @@
                         ],
                         "responses": [
                                 "Pierwsza strona pracy dyplomowej musi być zgodna ze „Wzorem strony tytułowej”. Znajduje się on na stronie WWW Wydziału, w zakładce „Do pobrania”"
+                        ]
+                },
+                {
+                        "tag": "podziekowania",
+                        "patterns": [
+                                "podziękowania",
+                                "podziękować"
+                        ],
+                        "responses": [
+                                "Podziękowania dla osób, które przyczyniły się do powstania pracy można zamieścić na trzeciej stronie"
                         ]
                 },
                 {
@@ -103,7 +115,124 @@
                                 "oznaczenia"
                         ],
                         "responses": [
-                                "Po spisie treści zalecane jest umieszczenie wykazu użytych symboli, oznaczeń i akronimów, jeżeli jest to konieczne."
+                                "Zalecane jest umieszczenie wykazu użytych symboli, oznaczeń i akronimów po spisie treści, jeżeli jest to konieczne"
+                        ]
+                },
+                {
+                        "tag": "wstep",
+                        "patterns": [
+                                "wstep",
+                                "wprowadzenie"
+                        ],
+                        "responses": [
+                                "Wstęp zawiera od 1 do 5 stron z charakterystyką problematyki w świetle aktualnego stanu wiedzy i techniki, ze wskazaniem na zagadnienia istotne z punktu widzenia realizowanej pracy. Ostatni akapit wstępu musi zawierać zwięzłe sformułowanie celu i zakresu pracy."
+                        ]
+                },
+                {
+                        "tag": "tekst",
+                        "patterns": [
+                                "tekst zasadniczy",
+                                "główna część pracy",
+                                "treść pracy",
+                                "główny tekst"
+                        ],
+                        "responses": [
+                                "Pierwsza część tekstu zasadniczego zajmuje do 20% objętości pracy. W zależności od charakteru pracy ten rozdział powinien zawierać: opis tematyki zagadnienia (aktualny stan zagadnienia), metody i rozwiązania, dyskusję i krytyczną ocenę stanu aktualnego, podsumowanie stanu wiedzy, techniki, literaturowe. Druga część tekstu zasadniczego zajmuje onad 50% objętości pracy i jest częścią autorską. Zawiera ona: założenia i dane, opis zastosowanej metody rozwiązania lub analizy, opis proponowanego rozwiązania, wyniki analizy teoretycznej, obliczenia, projekt konstrukcyjny, procesowy, technologiczny,  wyniki badań analitycznych, symulacyjnych lub eksperymentalnych"
+                        ]
+                },
+                {
+                        "tag": "podsumowanie",
+                        "patterns": [
+                                "podsumowanie",
+                                "wnioski końcowe",
+                                "wnioski",
+                                "koniec",
+                                "zakończenie"
+                        ],
+                        "responses": [
+                                "Podsumowanie powinno zajmować od 1 do 3 stron i merytorycznie podsumowywać najważniejsze elementy pracy oraz zawierać wnioski wynikające z osiągniętego celu pracy, jak również zaproponowane zalecenia i modyfikacje oraz rozwiązania będące wynikiem realizowanej pracy. Ostatni akapit podsumowania musi zawierać wykaz własnej pracy dyplomanta i zaczynać się od sformułowania: „Autor za własny wkład pracy uważa: …”."
+                        ]
+                },
+                {
+                        "tag": "zalaczniki",
+                        "patterns": [
+                                "załącznik",
+                                "materiał źródłowy",
+                                "program",
+                                "katalog",
+                                "kod źródłowy",
+                                "kod"
+                        ],
+                        "responses": [
+                                "Strona z załącznikami to uzupełnienie pracy o dowolny materiał źródłowy (wydruk programu komputerowego, dokumentacja konstrukcyjno-technologiczna, konstrukcja modelu – makiety – urządzenia, instrukcja obsługi urządzenia lub stanowiska laboratoryjnego, zestawienie wyników pomiarów i obliczeń, informacyjne materiały katalogowe)"
+                        ]
+                },
+                {
+                        "tag": "literatura",
+                        "patterns": [
+                                "literatura",
+                                "książka",
+                                "źródło",
+                                "pozycje książkowe",
+                                "wykaz literatury",
+                                "źródła"
+                        ],
+                        "responses": [
+                                "W wykazie literatury zamieszcza się wyłącznie pozycje, na które powołano się w pracy. Wykaz literatury rozpoczyna od strony nieparzystej. Kolejność numerów w wykazie - zgodna z kolejnością pojawiania się danej pozycji w tekście. Format akapitu: akapit wyjustowany, wysunięcie 0,75 cm. Prawidłowo opracowany wykaz został zaprezentowany w szablonie pracy dyplomowej dostępnym na stronie WWW Wydziału, w zakładce „Do pobrania”"
+                        ]
+                },
+                {
+                        "tag": "streszczenie",
+                        "patterns": [
+                                "streszczenie",
+                                "streścić",
+                                "streść"
+                        ],
+                        "responses": [
+                                "Streszczenie to 1 strona komunikatywnego opisu najistotniejszych zagadnień pracy w języku polskim i angielskim. Zawiera również słowa kluczowe. Prawidłowo opracowane streszczenie zostało zaprezentowane we wzorze streszczenia dostępnym na stronie WWW Wydziału, w zakładce „Do pobrania”"
+                        ]
+                },
+                {
+                        "tag": "format",
+                        "patterns": [
+                                "format",
+                                "formatowanie"
+                        ],
+                        "responses": [
+                                "Aby dowiedzieć się więcej o formatowaniu, możesz zapytać mnie o: formatowanie rozdziałów, formatowanie tekstu, odnośniki"
+                        ]
+                },
+                {
+                        "tag": "rozdziały",
+                        "patterns": [
+                                "rozdziały",
+                                "formatowanie rozdziałów",
+                                "format rozdziału"
+                        ],
+                        "responses": [
+                                "Rozdziały zaczynają się u góry nowej strony (parzystej lub nieparzystej). Podrozdziały i zakresy mogą zaczynać się w dowolnym miejscu strony. Przy stosowaniu podziału na rozdziały i podrozdziały zaleca się unikać podziału więcej niż trzystopniowego. Podział tekstu, szczególnie na rozdziały główne, wynikać powinien z zakresu i charakterystyki realizowanej pracy. Należy pamiętać, że na końcu tytułu rozdziału, podrozdziału i zakresu nie umieszcza się kropki"
+                        ]
+                },
+                {
+                        "tag": "format_tekstu",
+                        "patterns": [
+                                "format tekstu",
+                                "formatowanie tekstu",
+                                "tekst"
+                        ],
+                        "responses": [
+                                "Marginesy deklaruje się jako „lustrzane” i ustawia na 2 cm, na oprawę 1,5 cm. Nagłówek i stopka 1,25 cm. Tekst podstawowy akapitu: czcionka szeryfowa, styl Times (Times New Roman, Liberation Serif itp.), rozmiar 12 pkt., interlinia 1,5 wiersza. Akapit wyjustowany, wcięcie pierwszego wiersza 1,25 cm."
+                        ]
+                },
+                {
+                        "tag": "odnośniki",
+                        "patterns": [
+                                "odnośnik",
+                                "cytat",
+                                "przypis"
+                        ],
+                        "responses": [
+                                "Na końcu każdego akapitu, którego tekst zaczerpnięto z literatury, musi znajdować się odnośnik do właściwej pozycji w wykazie literatury. W pracy nie stosuje się odnośników w formie przypisów. Liczby w nawiasie kwadratowym oznaczają kolejny numer pozycji w wykazie, np. [1] lub [1, 4, 7] lub [1, 6-8] itp."
                         ]
                 }
         ]
